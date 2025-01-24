@@ -1,0 +1,16 @@
+﻿@using TravelTripProje.Models.Siniflar;
+@model List<Blog>
+<div class="padding">
+    <h4>Son 10 Gezinti</h4>
+    <ul class="list list-pad">
+        @{ int i = 0;} 
+        @foreach (var x in Model)
+        {
+            i++;
+            <li class="list-bg"><span>@i</span><a href="/Blog/BlogDetay/@x.Id">@x.Baslik</a></li>
+        }
+
+
+    </ul>
+    <a href="/Blog/Index" class="link1">Bütün Gezintileri Görüntüle</a>
+</div>
